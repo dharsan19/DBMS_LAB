@@ -5,9 +5,9 @@ create table manager(enumber number(2),ename char(15),salary number(5),commissio
 ## Values
 ```sql
 insert into manager values(7369,'Dharsan',2500,500,30000,'30-June-81','clerk',10,'John');
-insert into manager values(7839,'Subu',3000,400,36000,'1-Jul-81','manager',null,'James');
-insert into manager values(7934,'Aadhi',3500,300,42000,'1-May-81','manager',30,NULL);
-insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-81','clerk',40,'Bond');
+insert into manager values(7839,'Subu',3000,400,36000,'1-Jul-82','manager',null,'James');
+insert into manager values(7934,'Aadhi',3500,300,42000,'1-May-82','manager',30,NULL);
+insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bond');
 ```
 ## Q1)	Update all the records of manager table by increasing 10% of their salary as bonus.
 ```sql 
@@ -15,7 +15,7 @@ UPDATE manager set salary = salary+salary/10;
 ```
 ## Q2)	Delete the records from manager table where the salary less than 2750.
 ```sql 
-DELETE FROM WHERE salary < 2750;
+DELETE FROM manager WHERE salary < 2750;
 ```
 ## Q3)	Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 ```sql
@@ -83,7 +83,7 @@ select Hiredate,ename,designation,deptno from manager order by Hiredate;
 ```
 ## Q19) Sort emp table in descending order by annual salary and list empno, ename, job and annual-salary.
 ```sql
-select annualsalary,enumber,ename,designation from manager order by annualsalary desc;
+select enumber,ename,designation,annualsalary from manager order by annualsalary desc;
 ```
 ## Q20)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
 ```sql
