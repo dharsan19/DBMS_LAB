@@ -43,7 +43,7 @@ select ename from manager where designation != 'manager';
 ```
 ## Q9)	List the names of employees not belonging to dept no 30,40 & 10
 ```sql
-select * from manager where deptno != 30 and deptno != 40 and deptno != 10 ; 
+select ename from manager where deptno != 30 and deptno != 40 and deptno != 10 ; 
 ```
 ## Q10)	List names of those employees joined between 30 June 81 and 31 Dec 81.
 ```sql
