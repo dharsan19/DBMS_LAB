@@ -1,6 +1,6 @@
 ## Table
 ```sql
-create table manager(ename number(2),ename char(15),salary number(5),commission number(4),annualsalary number(7),Hiredate date,designation char(10),deptno number(2),reporting char(10));
+create table manager(enumber number(2),ename char(15),salary number(5),commission number(4),annualsalary number(7),Hiredate date,designation char(10),deptno number(2),reporting char(10));
 ```
 ## Values
 ```sql
@@ -35,7 +35,7 @@ select * from manager where Hiredate < '30-sep-81';
 ```
 ## Q7)	List names of employees who’s employee numbers are 7369,7839,7934,7788.
 ```sql
-select ename from manager where ename in (7369,7521,7839,7934,7788);
+select enumber from manager where enumber in (7369,7521,7839,7934,7788);
 ```
 ## Q8)	List the names of employee who are not Managers.
 ```sql
