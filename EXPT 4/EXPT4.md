@@ -1,11 +1,5 @@
 # INTEGRITY CONSTRAINTS
-## Q1) Create the table Department with the attributes listed.
-## Add Primary key constraint to the column DEPTNO of DEPT table.
-
-## Column name	Data type	 constraints
-## DEPT_NO	    Number(5)	 Primary Key
-## DNAME	    Varchar(10)	
-## DLOC	        Varchar(10)
+## Q1)
 
 ```sql
 CREATE TABLE DEPT (
@@ -67,6 +61,14 @@ ADD CONSTRAINT CHK_COMMISSION CHECK (COMMISSION < 0.1 * SALARY);
 ```
 
 ## Q8)
+
+```sql
+INSERT INTO DEPT (DEPT_NO, DNAME, DLOC)
+VALUES (10, 'ACCOUNTING', 'NEW YORK'),
+       (20, 'RESEARCH', 'DALLAS'),
+       (30, 'SALES', 'CHICAGO'),
+       (40, 'OPERATIONS', 'BOSTON');
+```
 
 ```sql
 INSERT INTO EMP (EMP_NO, ENAME, JOB, HIRE_DATE, SALARY, COMMISSION, DEPT_NO)
