@@ -2,7 +2,7 @@
 Give this Repository a ⭐️⭐️ Star ⭐️⭐️ for updates.
 COPY PASTE ALL THE QUERIES ONE BY ONE IN SQLPLUS TO EXECUTE IT WITHOUT ANY ERROR
 ```
-# SQL FUNCTIONS 
+# S U B  Q U E R I E S
 ## Drop the existing table
 ```sql
 Drop table emp;
@@ -56,55 +56,52 @@ INSERT INTO emp (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
 VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('23-JAN-82', 'DD-MON-RR'), 1300, 10, 10);
 ```
 
-## Q1) Find number of rows in the table EMP
+## Q1) List the name of the employees whose salary is greater than that of employee with empno 7566.
 ```sql
-SELECT COUNT(*) FROM emp;
+
 ```
 
-## Q2)	Find number of designations available in EMP table.
+## Q2)List the name of the employees whose job is equal to the job of employee with empno 7369 and salary is greater than that of employee with empno 7876.
 ```sql
-SELECT COUNT(DISTINCT job) FROM emp;
+
 ```
 
-## Q3)	What is the difference between the following queries
+## Q3) List the ename,job,sal of the employee who get minimum salary in the company.
 ```sql
-select count(comm) from emp;
-```
-```sql
-select count(nvl(comm,0)) from emp;
+
 ```
 
-## Q4)	Find maximum, minimum and average salary in EMP table.
+## Q4) List deptno &amp; min(salary) departmentwise, only if min(sal) is greater than the min(sal) of deptno 20.
 ```sql
-SELECT MAX(sal), MIN(sal), AVG(sal) FROM emp;
+
 ```
 
-## Q5)	Find number of employees who work in department number 30
+## Q5) List empno, ename, job of the employees whose job is not a ‘CLERK’ and whose salary is less than at least one of the salaries of the employees whose job is ‘CLERK’.
 ```sql
-SELECT COUNT(*) FROM emp WHERE deptno = 30;
+
 ```
 
-## Q6)	Find the maximum salary paid to a ‘CLERK’
+## Q6) List empno, ename, job of the employees whose salary is greater than the average salary of each department.
 ```sql
-SELECT MAX(sal) FROM emp WHERE job = 'CLERK';
+
 ```
 
-## Q7)	List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
+## Q7) List ename, job, sal of the employees whose salary is equal to any one of the salary of the employee ‘SCOTT’ and ‘WARD’.
 ```sql
-SELECT job, COUNT(*) as num_employees FROM emp GROUP BY job ORDER BY num_employees DESC;
+
 ```
 
-## Q8) List the total salary, maximum and minimum salary and average salary of the employees jobwise.
+## Q8) List ename, job, sal of the employees whose salary and job is equal to the employee ‘FORD’.
 ```sql
-SELECT job, SUM(sal) as total_salary, MAX(sal) as max_salary, MIN(sal) as min_salary, AVG(sal) as avg_salary FROM emp GROUP BY job;
+
 ```
 
-## Q9) List the total salary, maximum and minimum salary and average salary of the employees jobwise, for department 20 and display only those rows having an average salary > 1000.
+## Q9) List ename, job, deptno, sal of the employees whose job is same as ‘JONES’ and salary is greater than the employee ‘FORD’.
 ```sql
- SELECT job, SUM(sal) as total_salary, MAX(sal) as max_salary, MIN(sal) as min_salary, AVG(sal) as avg_salary FROM emp WHERE deptno = 20 GROUP BY job HAVING AVG(sal) > 1000;
+
 ```
 
-## Q10)	List the job and total salary of employees jobwise, for jobs other than ‘PRESIDENT’ and display only those rows having total salary > 5000.
+## Q10) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 ```sql
- SELECT job, SUM(sal) as total_salary FROM emp WHERE job != 'PRESIDENT' GROUP BY job HAVING SUM(sal) > 5000;
+
 ```
