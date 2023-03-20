@@ -1,6 +1,7 @@
-# COPY PASTE ALL THE QUERIES ONE BY ONE TO EXECUTE IN SQLPLUS WITHOUT ANY ERROR
-# GIVE THIS A REPO A STAR IF IT IS HELPFUL
-
+```
+Give this Repository a ⭐️⭐️ Star ⭐️⭐️ for updates.
+COPY PASTE ALL THE QUERIES ONE BY ONE IN SQLPLUS TO EXECUTE IT WITHOUT ANY ERROR
+```
 # DCL
 ## Q1 Give grant permission to your neighbor for any one of your tables. Tell him/her to access (modify the data) your table from their login.
 ```SQL

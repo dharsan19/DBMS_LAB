@@ -1,8 +1,15 @@
-# Create a Customer1 Table
+```
+Give this Repository a ⭐️⭐️ Star ⭐️⭐️ for updates.
+COPY PASTE ALL THE QUERIES ONE BY ONE IN SQLPLUS TO EXECUTE IT WITHOUT ANY ERROR
+```
+
+# JOINING TABLES
+## Create a Customer1 Table
 ```sql
 CREATE TABLE Customer1 (customer_id INT,cust_name VARCHAR(50),city VARCHAR(50),grade INT,salesman_id INT);
 ```
-# Adding Values to the Table
+
+## Inserting Values to the Table
 ```sql
 INSERT INTO Customer1 (customer_id, cust_name, city, grade, salesman_id) VALUES(3002, 'Nick Rimando', 'New York', 100, 5001);
 INSERT INTO Customer1 (customer_id, cust_name, city, grade, salesman_id) VALUES(3007, 'Brad Davis', 'New York', 200, 5001);
@@ -13,11 +20,13 @@ INSERT INTO Customer1 (customer_id, cust_name, city, grade, salesman_id) VALUES(
 INSERT INTO Customer1 (customer_id, cust_name, city, grade, salesman_id) VALUES(3003, 'Jozy Altidor', 'Moscow', 200, 5007);
 INSERT INTO Customer1 (customer_id, cust_name, city, grade, salesman_id) VALUES(3001, 'Brad Guzan', 'London', NULL, 5005);
 ```
-# Create a Salesperson1 table
+
+## Create a Salesperson1 table
 ```sql
 CREATE TABLE Salesman1 (salesman_id INT,name VARCHAR(50),city VARCHAR(50),commission DECIMAL(4,2));
 ```
-# Adding Values to the Table
+
+## Inserting Values to the Table
 ```sql
 INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5001, 'James Hoog', 'New York', 0.15);
 INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5002, 'Nail Knite', 'Paris', 0.13);
@@ -26,14 +35,17 @@ INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5006, 'Mc Lyo
 INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5007, 'Paul Adam', 'Rome', 0.13);
 INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5003, 'Lauson Hen', 'San Jose', 0.12);
 ```
-# Create a Order1 table
+
+## Create a Order1 table
 ```sql
 CREATE TABLE Order1 (ord_no INT,purch_amt DECIMAL(8,2),ord_date DATE,customer_id INT,salesman_id INT);
 ```
+
 ```sql
 ALTER SESSION SET nls_date_format='yyyy-mm-dd';
 ```
-# Adding Values to the Table
+
+## Inserting Values to the Table
 ```sql
 INSERT INTO Order1 (ord_no, purch_amt, ord_date, customer_id, salesman_id) VALUES (70001, 150.5, '2012-10-05', 3005, 5002);
 INSERT INTO Order1 (ord_no, purch_amt, ord_date, customer_id, salesman_id) VALUES (70009, 270.65, '2012-09-10', 3001, 5005);
