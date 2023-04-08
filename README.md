@@ -4,7 +4,7 @@ The SQL Queries for the Database Management System LAB Course are contained in t
 
 If it has any error feel free to make a PR ❕❕
 
-Star 🌟 && Share 🤟🏻
+🌟 Star 🌟 && Share 🤟🏻
 
 🤍 Happy Coding 🤍
 ```
