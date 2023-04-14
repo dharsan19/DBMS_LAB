@@ -12,6 +12,3 @@ If it has any error feel free to make a PR ❕❕
 ```
 a1-a2-b1.c0vm8jxyhl5s.us-east-2.rds.amazonaws.com
 ```
-
-
-
