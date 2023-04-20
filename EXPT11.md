@@ -112,3 +112,50 @@ END;
 ```sql
 
 ```
+
+## 5) Procedure to delete a specific row from a table
+
+``` sql
+CREATE TABLE student4 (
+  id NUMBER(10) PRIMARY KEY,
+  name VARCHAR2(100) NOT NULL,
+  email VARCHAR2(100) UNIQUE,
+  phone VARCHAR2(20),
+  age NUMBER(3),
+  gender VARCHAR2(10),
+  address VARCHAR2(200)
+);
+```
+
+``` sql
+INSERT INTO student4 (id, name, email, phone, age, gender, address)
+VALUES (101, 'John Smith', 'john.smith@example.com', '555-1234', 25, 'Male', '123 Main St');
+
+INSERT INTO student4 (id, name, email, phone, age, gender, address)
+VALUES (202, 'Jane Doe', 'jane.doe@example.com', '555-5678', 22, 'Female', '456 Maple Ave');
+
+INSERT INTO student4 (id, name, email, phone, age, gender, address)
+VALUES (303, 'Bob Johnson', 'bob.johnson@example.com', '555-2468', 28, 'Male', '789 Elm St');
+```
+
+``` sql
+CREATE OR REPLACE PROCEDURE delete_row(
+    row_id IN NUMBER
+)
+IS
+BEGIN
+  DELETE FROM student4 WHERE id = row_id;
+  COMMIT;
+END;
+/
+```
+
+``` sql
+DECLARE
+  row_id NUMBER := 101;
+BEGIN
+  delete_row(row_id);
+  DBMS_OUTPUT.PUT_LINE('Row with ID ' || row_id || ' deleted.');
+END;
+/
+```
