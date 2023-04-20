@@ -109,12 +109,6 @@ END;
 ```
 
 ## 5) Write a procedure to delete a specific row from the table already created.
-```sql
-
-```
-
-## 5) Procedure to delete a specific row from a table
-
 ``` sql
 CREATE TABLE student4 (
   id NUMBER(10) PRIMARY KEY,
