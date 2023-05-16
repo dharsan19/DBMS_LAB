@@ -73,37 +73,24 @@ END;
 
 ## 4) Write a procedure to reverse a input string and check it is palindrome or not.
 ```sql
-CREATE OR REPLACE PROCEDURE check_palindrome (
-    str IN VARCHAR2,
-    is_palindrome OUT BOOLEAN
-) IS
-    rev_str VARCHAR2(32767);
+CREATE OR REPLACE PROCEDURE check_palindrome(input_string IN VARCHAR2) IS
+   reversed_string VARCHAR2(4000);
 BEGIN
-    -- Reverse the input string
-    FOR i IN REVERSE 1..LENGTH(str) LOOP
-        rev_str := rev_str || SUBSTR(str, i, 1);
-    END LOOP;
-    
-    -- Check if the reversed string is equal to the original string
-    IF str = rev_str THEN
-        is_palindrome := TRUE;
-    ELSE
-        is_palindrome := FALSE;
-    END IF;
-END;
+   -- Reverse the input string
+   reversed_string := REVERSE(input_string);
+
+   -- Check if the reversed string is equal to the input string
+   IF input_string = reversed_string THEN
+      DBMS_OUTPUT.PUT_LINE('The input string is a palindrome.');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('The input string is not a palindrome.');
+   END IF;
+END check_palindrome;
 /
 ```
 ```sql
-DECLARE
-    str VARCHAR2(32767) := 'racecar';
-    palindrome BOOLEAN;
 BEGIN
-    check_palindrome(str, palindrome);
-    IF palindrome THEN
-        DBMS_OUTPUT.PUT_LINE(str || ' is a palindrome');
-    ELSE
-        DBMS_OUTPUT.PUT_LINE(str || ' is not a palindrome');
-    END IF;
+   check_palindrome('level');
 END;
 /
 ```
